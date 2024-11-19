@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <!-- Inline CSS for profile page (black and white theme) -->
+    <style>
+        body {
+            background-color: #a3d0e0;
+            color: #000000;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h2 {
+            color: #f0eaea;
+            font-size: 32px;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #100c0c;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        p {
+            font-size: 18px;
+            margin: 20px 0;
+            color: #000000;
+        }
+        .profile-container {
+            border: 2px solid #000000;
+            border-radius: 8px;
+            padding: 20px;
+            background-color: #ffffff;
+        }
+    </style>
+
+    <div class="container">
+        <h2>Your Profile</h2>
+        <div class="profile-container">
+            <p>Username: {{ user.username }}</p>
+            <p>Email: {{ user.email }}</p>
+        </div>
+    </div>
+{% endblock %}

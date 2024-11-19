@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <!-- Inline CSS for dashboard content -->
+    <style>
+        h2 {
+            color: #e7f4f2f7;
+            font-size: 32px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        p {
+            font-size: 18px;
+            color: #ebeff3;
+            text-align: center;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        .dashboard-container {
+            padding: 30px;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #050101;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+    </style>
+
+    <div class="dashboard-container">
+        <h2>Welcome, {{ username }}!</h2>
+        <p>This is your dashboard.</p>
+    </div>
+{% endblock %}
